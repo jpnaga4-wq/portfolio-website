@@ -573,6 +573,53 @@
     .projects-grid { grid-template-columns:1fr; }
   }
 
+  /* ── EXTRA RESPONSIVE ── */
+  img { max-width:100%; }
+  .hero-inner > *, .about-grid > *, .contact-grid > * { min-width:0; }
+  .hero-inner, .about-grid, .contact-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+  #hero { min-height:100vh; min-height:100svh; }
+  .hero-stats { flex-wrap:wrap; }
+  .exp-header { flex-wrap:wrap; gap:8px; }
+  .project-link { word-break:break-all; }
+  @media(hover:none), (pointer:coarse) {
+    body, .btn-primary, .btn-secondary, .project-card, .overlay-btn, .form-submit { cursor:auto; }
+    #cursor, #cursor-ring, #mouse-glow { display:none; }
+    .project-overlay { opacity:0; }
+  }
+  @media(max-width:1024px) { .hero-inner, .about-grid, .contact-grid { grid-template-columns:minmax(0,1fr); } .hero-role { justify-content:center; } .hero-label { margin-left:auto; margin-right:auto; } }
+  @media(min-width:769px) and (max-width:1024px) {
+    .hero-visual { height:460px; }
+    .nav-links { gap:22px; }
+    .about-card-float { right:10px; }
+    .skills-grid { grid-template-columns:repeat(2,1fr); }
+    .projects-grid { grid-template-columns:repeat(2,1fr); }
+  }
+  @media(max-width:768px) {
+    .about-card-float { right:10px; bottom:-16px; padding:14px 16px; }
+    .about-img-wrap { max-width:420px; margin:0 auto; }
+    .hero-stats { gap:22px; }
+    .hero-btns { gap:12px; }
+    .section-desc { margin-bottom:40px; }
+    .timeline-wrap { padding-right:4px; }
+  }
+  @media(max-width:480px) {
+    .hero-btns { flex-direction:column; align-items:stretch; }
+    .btn-primary, .btn-secondary { justify-content:center; }
+    .hero-label { font-size:.7rem; }
+    .section-eyebrow::before, .section-eyebrow::after { width:18px; }
+    .skill-cat { padding:22px; }
+    .contact-form { padding:20px; }
+    .footer-tagline { font-size:.8rem; }
+  }
+  @media(max-width:360px) {
+    .hero-name { font-size:2.2rem; letter-spacing:-1px; }
+    .hero-stats { gap:14px; }
+    .stat-label { font-size:.65rem; }
+    .hero-avatar-wrap { width:170px; height:170px; }
+    .hero-ring-1 { width:220px; height:220px; }
+    .hero-ring-2 { width:270px; height:270px; }
+  }
+
   /* Mobile nav */
   .mobile-nav {
     position:fixed; inset:0; background:rgba(255,255,255,.97);
@@ -655,7 +702,7 @@
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-num">1+</div>
+          <div class="stat-num">2+</div>
           <div class="stat-label">Years Exp.</div>
         </div>
         <div class="stat">
@@ -664,7 +711,7 @@
         </div>
         <div class="stat">
           <div class="stat-num">6</div>
-          <div class="stat-label">Months Intern</div>
+          <div class="stat-label">Months Digital Info</div>
         </div>
       </div>
     </div>
@@ -706,41 +753,41 @@
 </div>
         <div class="about-card-float">
           <div class="icon"><i class="fas fa-code"></i></div>
-          <div class="info"><strong>1+ Year</strong><span>Professional Experience</span></div>
+          <div class="info"><strong>2+ Years</strong><span>Professional Experience</span></div>
         </div>
       </div>
       <div class="about-content reveal-right">
         <div class="section-eyebrow">About Me</div>
         <h2 class="section-title">Passionate <span>Developer</span> & Designer</h2>
-        <p>I am a passionate Website Developer with 1+ year of professional experience and 6 months of internship experience in WordPress development, responsive website design, SEO optimization, and digital marketing.</p>
-        <p>I specialize in building modern, high-performance, user-friendly websites using WordPress, Elementor, HTML, CSS, and JavaScript. I focus on premium UI design, responsiveness, smooth interactions, and optimized website performance.</p>
+        <p>I am a results-driven Frontend &amp; Website Developer with 2+ years of hands-on experience and a strong coding foundation in HTML5, CSS3, JavaScript, React.js, PHP and Python. I have delivered 40+ high-performing websites, including 15+ custom coded projects and 25+ WordPress builds.</p>
+        <p>I specialize in API integration (REST APIs, JSON, third-party services) and server handling (hosting, cPanel, DNS, SSL, website migrations), alongside WordPress, Elementor, WooCommerce and On-Page, Off-Page &amp; Technical SEO with Core Web Vitals optimization. I focus on clean code, premium UI design, responsiveness and measurable performance gains.</p>
         <div class="exp-cards">
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Web Development Intern</div>
+              <div class="exp-role">Website Developer</div>
               <div class="exp-duration">6 Months</div>
             </div>
             <div class="exp-company"><i class="fas fa-building" style="color:var(--blue-1);margin-right:6px;font-size:.8rem"></i>Digital Info Solution, Nagercoil</div>
             <div class="exp-tags">
-              <span class="exp-tag">WordPress</span>
-              <span class="exp-tag">UI Improvements</span>
-              <span class="exp-tag">Responsive Design</span>
-              <span class="exp-tag">SEO</span>
+              <span class="exp-tag">Responsive Websites</span>
+              <span class="exp-tag">Website Maintenance</span>
+              <span class="exp-tag">On-Page SEO</span>
+              <span class="exp-tag">Bug Fixing</span>
             </div>
           </div>
           <div class="exp-card">
             <div class="exp-header">
               <div class="exp-role">Website Developer</div>
-              <div class="exp-duration">1 + Year</div>
+              <div class="exp-duration">Jun 2025 – Present</div>
             </div>
             <div class="exp-company"><i class="fas fa-building" style="color:var(--blue-1);margin-right:6px;font-size:.8rem"></i>Amplepro Technology, Chennai</div>
             <div class="exp-tags">
-              <span class="exp-tag">Responsive Sites</span>
-              <span class="exp-tag">Elementor</span>
-              <span class="exp-tag">Performance</span>
-              <span class="exp-tag">Hosting</span>
               <span class="exp-tag">Html , CSS , JavaScript, PHP</span>
+              <span class="exp-tag">API Integration</span>
               <span class="exp-tag">Server Handling</span>
+              <span class="exp-tag">Website Migration</span>
+              <span class="exp-tag">WordPress · Elementor</span>
+              <span class="exp-tag">SEO · Performance</span>
               <!-- <span class="exp-tag">Hosting</span> -->
             </div>
           </div>
@@ -761,33 +808,54 @@
     <div class="skills-grid">
       <div class="skill-cat reveal">
         <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
-        <h4>Web Development</h4>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">WordPress</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <h4>Coding Skills</h4>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">HTML5</span><span class="skill-pct">92%</span></div><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">CSS3</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Elementor</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">React.js</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="65"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="55"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Bootstrap</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
       </div>
       <div class="skill-cat reveal" style="transition-delay:.1s">
-        <div class="skill-cat-icon"><i class="fas fa-chart-line"></i></div>
-        <h4>Digital Marketing</h4>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">SEO</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">GMP</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Keyword Research</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-cat-icon"><i class="fab fa-wordpress"></i></div>
+        <h4>WordPress &amp; E-Commerce</h4>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">WordPress</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Elementor</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">WooCommerce</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
       </div>
       <div class="skill-cat reveal" style="transition-delay:.2s">
-        <div class="skill-cat-icon"><i class="fas fa-paint-brush"></i></div>
-        <h4>Design Tools</h4>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Canva</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Photoshop</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+        <div class="skill-cat-icon"><i class="fas fa-chart-line"></i></div>
+        <h4>SEO &amp; Performance</h4>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">On-Page SEO</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Off-Page SEO</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Local SEO</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Technical SEO</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Core Web Vitals</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
       </div>
       <div class="skill-cat reveal" style="transition-delay:.3s">
+        <div class="skill-cat-icon"><i class="fas fa-plug"></i></div>
+        <h4>API Integration</h4>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">REST API (Fetch / Axios)</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">JSON Handling</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Third-party APIs</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Postman Testing</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+      </div>
+      <div class="skill-cat reveal" style="transition-delay:.4s">
         <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
-        <h4>Other Tools</h4>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">cPanel</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <h4>Server Handling</h4>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">cPanel &amp; Hosting</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">DNS &amp; SSL Setup</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">Website Migration</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
         <div class="skill-item"><div class="skill-top"><span class="skill-name">Speed Optimization</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+      </div>
+      <div class="skill-cat reveal" style="transition-delay:.5s">
+        <div class="skill-cat-icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>Design &amp; Tools</h4>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Canva</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Photoshop</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Google Analytics</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
       </div>
     </div>
   </div>
@@ -799,12 +867,12 @@
     <div class="section-header reveal">
       <div class="section-eyebrow">My Work</div>
       <h2 class="section-title">Recent <span>Projects</span></h2>
-      <p class="section-desc">15 live websites crafted with WordPress, Elementor, HTML , CSS , JavaScript,  optimization & responsive design — delivered for real clients.</p>
+      <p class="section-desc">17 live websites crafted with WordPress, Elementor, HTML , CSS , JavaScript,  optimization & responsive design — delivered for real clients.</p>
     </div>
 
     <!-- Filter Tabs -->
     <div class="project-filters reveal">
-      <button class="pf-btn active" data-filter="all">All <span class="pf-count">15</span></button>
+      <button class="pf-btn active" data-filter="all">All <span class="pf-count">17</span></button>
       <button class="pf-btn" data-filter="dental">🦷 Dental</button>
       <button class="pf-btn" data-filter="business">💼 Business</button>
       <button class="pf-btn" data-filter="service">🔧 Service</button>
@@ -909,6 +977,22 @@
         </div>
       </div>
 
+      <div class="project-card reveal" data-cat="dental" style="transition-delay:.3s">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#ccfbf1,#99f6e4)">
+          <i class="fas fa-tooth"></i>
+          <div class="project-overlay">
+            <a href="https://nakshatradentalandgeneral.com/" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Site</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Dental &amp; General Clinic</div>
+          <div class="project-title">Nakshatra Dental &amp; General</div>
+          <div class="project-desc">Dental and general clinic website with responsive design, service pages, and contact integration.</div>
+          <div class="project-tags"><span class="ptag">Responsive</span><span class="ptag">UI Design</span><span class="ptag">SEO</span></div>
+          <a href="https://nakshatradentalandgeneral.com/" target="_blank" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> nakshatradentalandgeneral.com</a>
+        </div>
+      </div>
+
       <!-- BUSINESS -->
       <div class="project-card reveal" data-cat="business" style="transition-delay:.05s">
         <div class="project-thumb" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">
@@ -1006,6 +1090,22 @@
         </div>
       </div>
 
+      <div class="project-card reveal" data-cat="business" style="transition-delay:.35s">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+          <i class="fas fa-bolt"></i>
+          <div class="project-overlay">
+            <a href="https://sharabeshtechenergies.com/" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Site</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Tech / Energy</div>
+          <div class="project-title">Sharabesh Tech Energies</div>
+          <div class="project-desc">Business website for a tech and energy company with a clean, responsive layout.</div>
+          <div class="project-tags"><span class="ptag">Responsive</span><span class="ptag">UI Design</span><span class="ptag">SEO</span></div>
+          <a href="https://sharabeshtechenergies.com/" target="_blank" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> sharabeshtechenergies.com</a>
+        </div>
+      </div>
+
       <!-- SERVICE -->
       <div class="project-card reveal" data-cat="service" style="transition-delay:.05s">
         <div class="project-thumb" style="background:linear-gradient(135deg,#fdf4ff,#f5d0fe)">
@@ -1071,10 +1171,10 @@
       <div class="tl-item reveal">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <div class="tl-year">2020 – 2024</div>
-          <div class="tl-title">B.E Civil Engineering</div>
-          <div class="tl-sub">Anna University</div>
-          <div class="tl-detail">CGPA: 8.27</div>
+          <div class="tl-year">2020</div>
+          <div class="tl-title">HSS</div>
+          <div class="tl-sub">Little Flower Girls Higher Secondary School, Kanyakumari</div>
+          <div class="tl-detail">Higher Secondary</div>
         </div>
         <div style="flex:1"></div>
       </div>
@@ -1082,19 +1182,39 @@
         <div class="tl-dot"></div>
         <div style="flex:1"></div>
         <div class="tl-card">
-          <div class="tl-year">2024 | 6 Months</div>
-          <div class="tl-title">Web Development Intern</div>
-          <div class="tl-sub">Digital Info Solution, Nagercoil</div>
-          <div class="tl-detail">WordPress · SEO · Responsive Design</div>
+          <div class="tl-year">2020 – 2024</div>
+          <div class="tl-title">B.E Civil Engineering</div>
+          <div class="tl-sub">Anna University</div>
+          <div class="tl-detail">CGPA: 8.27</div>
         </div>
       </div>
       <div class="tl-item reveal" style="transition-delay:.3s">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <div class="tl-year">2025-2026 | 1 Year</div>
+          <div class="tl-year">2024 | 6 Months</div>
+          <div class="tl-title">Website Developer</div>
+          <div class="tl-sub">Digital Info Solution, Nagercoil</div>
+          <div class="tl-detail">Responsive Design · SEO · Maintenance</div>
+        </div>
+        <div style="flex:1"></div>
+      </div>
+      <div class="tl-item reveal" style="transition-delay:.15s">
+        <div class="tl-dot"></div>
+        <div style="flex:1"></div>
+        <div class="tl-card">
+          <div class="tl-year">2025</div>
+          <div class="tl-title">Full-Stack Development in Python</div>
+          <div class="tl-sub">Oscar Computer Education, Nagercoil</div>
+          <div class="tl-detail">Python · Full-Stack</div>
+        </div>
+      </div>
+      <div class="tl-item reveal" style="transition-delay:.3s">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">Jun 2025 – Present</div>
           <div class="tl-title">Website Developer</div>
           <div class="tl-sub">Amplepro Technology, Chennai</div>
-          <div class="tl-detail">Elementor · Performance · Hosting</div>
+          <div class="tl-detail">APIs · Server Handling · WordPress · SEO</div>
         </div>
         <div style="flex:1"></div>
       </div>
@@ -1121,14 +1241,17 @@
           </div>
           <div class="contact-item">
             <div class="c-icon"><i class="fas fa-envelope"></i></div>
-            <div class="c-info"><span>Email</span><strong>nageshwari@email.com</strong></div>
+            <div class="c-info"><span>Email</span><strong>jpnaga4@gmail.com</strong></div>
           </div>
           <div class="contact-item">
             <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="c-info"><span>Location</span><strong>Chennai, Tamil Nadu, India</strong></div>
           </div>
         </div>
-       
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/nageshwari-s-71a43a414/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://jpnaga4-wq.github.io/portfolio-website/" target="_blank" rel="noopener" class="social-btn" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+        </div>
       </div>
       <div class="contact-form reveal-right">
         <div class="form-row">
@@ -1173,7 +1296,7 @@
     <div class="footer-logo">Nageshwari S</div>
     <div class="footer-tagline">Website Developer ·  Designer · WordPress Expert</div>
    
-    <div class="footer-copy">© 2024 Nageshwari S. Crafted with <span style="color:#ef4444"></span> in Chennai</div>
+    <div class="footer-copy">© 2026 Nageshwari S. Crafted with <span style="color:#ef4444"></span> in Chennai</div>
   </div>
 </footer>
 
